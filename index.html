@@ -12,7 +12,6 @@
         }
         .scenebuttons {
             display: inline-block;
-            
         }
     </style>
 
@@ -21,10 +20,13 @@
 <body>
     <h1 class="center">The Curious Case of UFO Sightings</h1>
     <div class="scenebuttons">
-        <button class = "center" onclick="openScene1()">Open Another Webpage</button>
+        <button class = "center" onclick="openScene1()">Scene 1</button>
     </div>
     <div class="scenebuttons">
-        <button class = "center" onclick="openScene1()">Open Another Webpage</button>
+        <button class = "center" onclick="openScene2()">Scene 2</button>
+    </div>
+    <div class="scenebuttons">
+        <button class = "center" onclick="openScene2()">Scene 3</button>
     </div>
     
     
@@ -34,6 +36,12 @@
     <script>
         function openScene1(){
             window.open('scene1.html', '_blank');
+        }
+        function openScene2(){
+            window.open('scene2.html', '_blank');
+        }
+        function openScene3(){
+            window.open('scene3.html', '_blank');
         }
     </script>
 </body>
