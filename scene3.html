@@ -1,0 +1,94 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scene 3</title>
+
+    <script src="vis3.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="title.css">
+
+ 
+<style>
+        .center{
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+        
+</style>
+
+</head>
+
+<body onload="main()">
+    <br>
+    <h1 class="center">Scene 3: UFO Sightings Through the Years</h1>
+    <div id="scatterPlot"></div>
+    <div>
+        <!-- Drop-down menus for filtering -->
+        <label for="startYear">Start Year:</label>
+        <select id="startYear" onchange="updateScatterPlot()">
+            <option value="all">All</option>
+            <option value="1900">1900</option>
+            <option value="1910">1910</option>
+            <option value="1920">1920</option>
+            <option value="1930">1930</option>
+            <option value="1940">1940</option>
+            <option value="1950">1950</option>
+            <option value="1960">1960</option>
+            <option value="1970">1970</option>
+            <option value="1980">1980</option>
+            <option value="1990">1990</option>
+            <option value="2000">2000</option>
+            <option value="2010">2010</option>
+            <option value="2020">2020</option>
+        </select>
+
+        <label for="endYear">End Year:</label>
+        <select id="endYear" onchange="updateScatterPlot()">
+            <option value="all">All</option>
+            <option value="1900">1900</option>
+            <option value="1910">1910</option>
+            <option value="1920">1920</option>
+            <option value="1930">1930</option>
+            <option value="1940">1940</option>
+            <option value="1950">1950</option>
+            <option value="1960">1960</option>
+            <option value="1970">1970</option>
+            <option value="1980">1980</option>
+            <option value="1990">1990</option>
+            <option value="2000">2000</option>
+            <option value="2010">2010</option>
+            <option value="2020">2020</option>
+            
+        </select>
+    </div>
+
+    <div class="textbox-container">
+        <p>In the previous two scenes, we explored how the aspect of culture and the concept of collective perception
+            contributes to the narrative of UFO sightings. The scatter plot shown in this scene further supports those two
+            ideas.
+        </p>
+        <p> The chart shows the frequency of sightings over the course of a century. And as can clearly be seen, the number of sightings
+            increased exponentially after 1990, the dawn of the World Wide Web - when the internet became available to the masses.
+        </p>
+        <p> As more and more people report seeing unidentified flying objects, these accounts create a powerful <b>cultural narrative</b> that 
+            shapes how subsequent witnesses interpret their own experiences.
+        </p>
+        <p> While the recent spike in interest in UFO phenomena is certainly worth paying attention to, it is important to keep in mind
+            the cultural state of the current age as well. It is entirely possible that some of the sightings of UFOs are in fact extraterrestrial
+            in nature. However the sheer number of sightings alone cannot be pointed to as the smoking gun evidence for the arrival of aliens.
+        </p>
+      </div>
+
+    <button class = "center" onclick="openScene2()">Previous</button>
+    <button class = "center" onclick="openScene0()">Home</button>
+
+
+    
+
+    
+    
+
+</body>
+</html>
