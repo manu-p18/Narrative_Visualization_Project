@@ -1,3 +1,78 @@
 <html>
-<h1>Scene 1</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scene 1</title>
+
+    <script src="vis1.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="title.css">
+    <link rel="stylesheet" href="scene1.css">
+
+ 
+
+<style>
+        .bar{
+            fill: green;
+
+        }
+        .center{
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+        
+</style>
+</head>
+
+<body onload="main()">
+    <br>
+    <h1 class='center'> Scene 1: UFOs and the USA</h1>
+
+    <div id = "tooltip" class="hidden">
+        <p><strong># of sightings</strong></p>
+        <p><span id = "occurences">100</pspan></p>
+    </div>
+
+
+    <svg width=800 height=800></svg>
+    <div class="textbox-container">
+        <p>On the left is a chart of the frequency of UFO sightings by country. The data
+            spans from 1906 to 2014. 
+        </p>
+        <p> A singular bar immediately stands out. The frequency
+            of sightings in the US is many times greater than the number of sightings of all other 
+            countries in the dataset. <b>(Hovering over each bar shows exactly how many such sightings there has been)</b> </p>
+        <p> What could be the reason for this? Perhaps the biggest influencer is <b>culture</b>. 
+            Movies, TV shows, books, and other media have been portraying aliens since the early 20th century. Especially
+            the 1953 film 'The War of the Worlds', as well as the 1898 novel that it was inspired by, contributed greatly
+            to beginnning American's fascination with UFOs and extraterrestrials.
+        </p>
+        <p> When such a history exists with this unique interest in UFOs, it becomes easier to attribute unknown phenomena to 
+            UFO sightings. In other countries where the connection with UFOs is not as deep, it may  be that the people of that
+            country attribute unknown phenomena with things other than UFOs. In the next scene, we will explore another way this
+            groupthink may be affecting people's perceptions of UFOs.
+        </p>
+      </div>
+
+      <div class="textbox-container2" style="font-size: 16px;">
+        <p style="font-size: inherit;">Denmark has so few sightings that a bar cannot be seen. Hover to see exactly how few.<p>
+    </div>
+    
+       
+        
+      </div>
+
+
+    <div class="scenebuttons">
+        <button type='button' class = "center" onclick="openScene0()">Previous</button>
+        <button class = "center" onclick="openScene2()">Scene 2</button>
+    </div>
+
+    
+
+    
+    
+
+</body>
 </html>

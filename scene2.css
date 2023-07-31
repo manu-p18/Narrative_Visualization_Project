@@ -1,0 +1,65 @@
+.arc text{
+    font: 10px sans-serif;
+    text-anchor: middle;
+}
+
+.arc path{
+    stroke: white;
+}
+
+.title{
+    fill: teal;
+    font-weight: bold;
+}
+
+.textbox-container {
+    position: fixed;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    height: 600px;
+  }
+
+   /* Tooltip CSS */
+.tooltip {
+    /* position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: blue;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    pointer-events: none;
+    z-index: 9999; */
+
+    position: absolute;
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    background-color: aquamarine;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+    -moz-box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Tooltip Box CSS */
+.tooltip-box {
+    position: relative;
+    fill: coral;
+    stroke: black;
+    stroke-width: 1;
+    border-radius: 25px;
+}
+
+.tooltip-text {
+    fill: black;
+    font-size: 20px;
+    pointer-events: none;
+}

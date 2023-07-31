@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Bar Chart with D3</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+    <div id="chart-container">
+        <!-- SVG will be added here -->
+    </div>
+
+    <script>
+        // Data for the bars
+        const data = [
+            { country: 'us', height: 10 },
+            { country: 'gb', height: 3 },
+            { country: 'ca', height: 7 },
+            { country: 'au', height: 4 }
+        ];
+
+        // Define chart dimensions
+        const chartWidth = 300;
+        const chartHeight = 200;
+        const barWidth = 50;
+        const barSpacing = 10;
+        const labelPadding = 5; // Padding between bar and label
+
+        // Create SVG element
+        const svg = d3.select("#chart-container")
+            .append("svg")
+            .attr("width", chartWidth)
+            .attr("height", chartHeight);
+
+        // Create bars
+        const bars = svg.selectAll("rect")
+            .data(data)
+            .enter()
+            .append("rect")
+            .attr("x", (d, i) => i * (barWidth + barSpacing))
+            .attr("y", (d) => chartHeight - d.height * 10) // Scale the height by 10 for better visualization
+            .attr("width", barWidth)
+            .attr("height", (d) => d.height * 10) // Scale the height by 10 for better visualization
+            .attr("fill", "steelblue");
+
+        // Add labels for each bar underneath
+        const labels = svg.selectAll("text")
+            .data(data)
+            .enter()
+            .append("text")
+            .text((d) => d.country) // Display the country name as the label
+            .attr("x", (d, i) => i * (barWidth + barSpacing) + barWidth / 2)
+            .attr("y", (d) => chartHeight - d.height * 10 + labelPadding + 15) // Adjust the label position underneath the bar
+            .attr("text-anchor", "middle")
+            
+            .attr("fill", "black")
+            .style("font-size", "12px")
+            .attr("dy", "1em"); // Offset the text slightly downwards
+    </script>
+</body>
+</html>
