@@ -13,7 +13,7 @@ function openScene0(){
 
 
 
- function main(){
+ function main1(){
 
 
     const country_col = 'country';

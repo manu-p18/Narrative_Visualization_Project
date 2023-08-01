@@ -5,7 +5,7 @@ function openScene1(){
     window.open('scene1.html');
 }
 
- function main(){
+ function main2(){
 
 
     const shape_col = 'shape';

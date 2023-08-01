@@ -8,7 +8,7 @@ function openScene0(){
 let selectedStartYear = "all";
 let selectedEndYear = "all";
 
-function main(){
+function main3(){
 
 
     function updateScatterPlot() {
