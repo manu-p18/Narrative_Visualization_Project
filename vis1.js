@@ -13,7 +13,7 @@ function openScene0(){
 
 
 
- function main1(){
+ async function main1(){
 
 
     const country_col = 'country';
@@ -90,7 +90,8 @@ function openScene0(){
 
     var g = svg.append("g").attr("transform", "translate("+200+","+100+")");
 
-    d3.csv("https://manu-p18.github.io/416data/scene1.csv").then(function(data2){
+    var data2 = await d3.csv("https://manu-p18.github.io/416data/scene1.csv");
+    // d3.csv("https://manu-p18.github.io/416data/scene1.csv").then(function(data2){
         
         xScale.domain(data2.map(function(d){return d.country;}));
         yScale.domain([0, d3.max(data2, function(d){return d.occurences;})]);
@@ -118,7 +119,7 @@ function openScene0(){
             .attr("y", function(d){return yScale(d.occurences);})
             .attr("width", xScale.bandwidth())
             .attr("height", function(d){return height - yScale(d.occurences);});
-        });
+        // });
 
         // mouse over event
         function onMouseOver(d,i){

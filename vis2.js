@@ -5,7 +5,7 @@ function openScene1(){
     window.open('scene1.html');
 }
 
- function main2(){
+ async function main2(){
 
 
     const shape_col = 'shape';
@@ -112,8 +112,9 @@ function openScene1(){
             .outerRadius(radius)
             .innerRadius(radius - 200);
     
-        d3.csv('https://manu-p18.github.io/416data/scene2.csv').then(
-         function(data){
+        var data = await d3.csv("https://manu-p18.github.io/416data/scene2.csv");
+        // d3.csv('https://manu-p18.github.io/416data/scene2.csv').then(
+        //  function(data){
             var arc = g.selectAll('.arc')
                 .data(pie(data))
                 .enter().append('g')
@@ -174,11 +175,11 @@ function openScene1(){
                 .attr('class', 'title')
                 .attr('font-weight', 'bold')
          }
-        )
+        //)
     
 
 
 
 
 
- }
+ //}
