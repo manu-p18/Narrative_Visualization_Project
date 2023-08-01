@@ -90,7 +90,7 @@ function openScene0(){
 
     var g = svg.append("g").attr("transform", "translate("+200+","+100+")");
 
-    d3.csv("../scene1.csv").then(function(data2){
+    d3.csv("https://manu-p18.github.io/416data/scene1.csv").then(function(data2){
         
         xScale.domain(data2.map(function(d){return d.country;}));
         yScale.domain([0, d3.max(data2, function(d){return d.occurences;})]);

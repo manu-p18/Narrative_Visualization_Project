@@ -112,7 +112,7 @@ function openScene1(){
             .outerRadius(radius)
             .innerRadius(radius - 200);
     
-        d3.csv('../scene2.csv').then(
+        d3.csv('https://manu-p18.github.io/416data/scene2.csv').then(
          function(data){
             var arc = g.selectAll('.arc')
                 .data(pie(data))
